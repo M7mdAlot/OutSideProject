@@ -1,8 +1,6 @@
 using JetBrains.Annotations;
-using Unity.Android.Gradle.Manifest;
 using Unity.VisualScripting;
 using UnityEngine;
-using static UnityEditor.Searcher.SearcherWindow.Alignment;
 
 public class CharacterMovementScript : MonoBehaviour
 {
