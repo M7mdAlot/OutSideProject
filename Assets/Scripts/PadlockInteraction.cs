@@ -6,6 +6,8 @@ using UnityEngine.Events;
 public class PadlockInteraction : MonoBehaviour
 {
     public UnityEvent UE;
+    public Animator animator;
+    public GameObject Handle;
     public string PuzzleCode= "1234";
     public GameObject LockInteracton;
     public GameObject LockPuzzle;
@@ -208,6 +210,9 @@ public class PadlockInteraction : MonoBehaviour
     {
         Time.timeScale = 1f;
         Isinteracting = false;
+        EndPuzzle();
+        Handle.SetActive(true);
+        animator.SetBool("PuzzleFinished", true);
         yield return new WaitForSeconds(1.5f);
         EndPuzzle();
         UE.Invoke();
@@ -224,7 +229,6 @@ public class PadlockInteraction : MonoBehaviour
     {
         Time.timeScale = 1f;
         PuzzleCamera.Priority = 0;
-        LockInteracton.SetActive(true);
         LockPuzzle.SetActive(false);
         Isinteracting = false;
 
@@ -235,7 +239,6 @@ public class PadlockInteraction : MonoBehaviour
         PuzzleCamera.Priority = 20;
         yield return new WaitForSecondsRealtime(0.5f);
         Time.timeScale = 0f;
-        LockInteracton.SetActive(false);
         LockPuzzle.SetActive(true);
 
     }
