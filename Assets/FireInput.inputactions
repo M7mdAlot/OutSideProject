@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "FireInput",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "a8efb237-994b-422a-bc4f-4f2dfd9246ca",
+            "actions": [
+                {
+                    "name": "OnFire",
+                    "type": "Button",
+                    "id": "3f74b463-2e8e-48f9-813c-0d4b64c9b15b",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7c4d4657-5cc2-4620-8765-8f3e17c2bc52",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OnFire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
