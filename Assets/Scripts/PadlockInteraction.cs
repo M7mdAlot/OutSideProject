@@ -7,6 +7,7 @@ public class PadlockInteraction : MonoBehaviour
 {
     public UnityEvent UE;
     public Animator animator;
+    public Animator animatorLock;
     public GameObject Handle;
     public string PuzzleCode= "1234";
     public GameObject LockInteracton;
@@ -210,11 +211,11 @@ public class PadlockInteraction : MonoBehaviour
     {
         Time.timeScale = 1f;
         Isinteracting = false;
-        EndPuzzle();
         Handle.SetActive(true);
-        animator.SetBool("PuzzleFinished", true);
+        animatorLock.SetBool("LockOpen", true);
         yield return new WaitForSeconds(1.5f);
         EndPuzzle();
+        animator.SetBool("PuzzleFinished", true);
         UE.Invoke();
         Destroy(gameObject);
 
