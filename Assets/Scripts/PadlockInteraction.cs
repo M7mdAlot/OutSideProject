@@ -230,7 +230,6 @@ public class PadlockInteraction : MonoBehaviour
     {
         Time.timeScale = 1f;
         PuzzleCamera.Priority = 0;
-        LockPuzzle.SetActive(false);
         Isinteracting = false;
 
     }
