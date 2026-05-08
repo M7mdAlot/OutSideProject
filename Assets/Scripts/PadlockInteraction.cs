@@ -203,7 +203,6 @@ public class PadlockInteraction : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wrong Code is 1234");
 
         }
     }
@@ -239,7 +238,6 @@ public class PadlockInteraction : MonoBehaviour
         PuzzleCamera.Priority = 20;
         yield return new WaitForSecondsRealtime(0.5f);
         Time.timeScale = 0f;
-        LockPuzzle.SetActive(true);
 
     }
 
